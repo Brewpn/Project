@@ -1,7 +1,7 @@
-const createMethod = require('../../../db/commonMethods/create');
+const createMethod = require('db/commonMethods/create');
 ObjectID = require('mongodb').ObjectID;
 
-exports.post = async function (req, res, done) {
+exports.post = async function (req, res) {
 
     const collectionName = "Memory";
     const query = req.body.create_memory;

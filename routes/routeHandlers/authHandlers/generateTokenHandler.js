@@ -1,9 +1,9 @@
 const jwt = require('jsonwebtoken');
-const findMethod = require('../../../db/CommonMethods/find');
-const updateMethod = require('../../../db/CommonMethods/update');
+const findMethod = require('db/CommonMethods/find');
+const updateMethod = require('db/CommonMethods/update');
 const ObjectID = require('mongodb').ObjectID;
 
-exports.get = async function (req, res, done) {
+exports.get = async function (req, res) {
 
     const collectionName = 'User';
     const findOnlyOne = true;

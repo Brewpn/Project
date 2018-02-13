@@ -1,7 +1,7 @@
-const findMethod = require('../../../db/commonMethods/find');
+const findMethod = require('db/commonMethods/find');
 ObjectID = require('mongodb').ObjectID;
 
-exports.get = async function (req, res, done) {
+exports.get = async function (req, res) {
 
     const collectionName = "Memory";
     const query = {owner_id: ObjectID(req.user._id)};

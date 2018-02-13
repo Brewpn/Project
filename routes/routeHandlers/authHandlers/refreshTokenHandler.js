@@ -1,9 +1,9 @@
-const findMethod = require('../../../db/CommonMethods/find');
-const updateMethod = require('../../../db/CommonMethods/update');
+const findMethod = require('db/CommonMethods/find');
+const updateMethod = require('db/CommonMethods/update');
 const jwt = require('jsonwebtoken');
 const ObjectID = require('mongodb').ObjectID;
 
-exports.post = function (req, res, done) {
+exports.post = function (req, res) {
     const oldRefreshToken = req.body.refreshToken;
 
     const collectionName = 'User';
